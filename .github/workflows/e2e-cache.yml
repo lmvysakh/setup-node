@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - check_12520
       - releases/*
     paths-ignore:
       - '**.md'
@@ -18,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        os: [macos-15]
         node-version: [18, 20, 22]
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +42,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        os: [macos-15]
         node-version: [18, 20, 22]
     steps:
       - uses: actions/checkout@v4
@@ -74,7 +75,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        os: [macos-15]
         node-version: [18, 20]
     steps:
       - uses: actions/checkout@v4
@@ -106,7 +107,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        os: [macos-15]
         node-version: [18, 20, 22]
     steps:
       - uses: actions/checkout@v4
